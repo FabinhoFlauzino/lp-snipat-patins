@@ -8,8 +8,16 @@
   justify-content: space-between;
   overflow: hidden;
 
+  @media (max-width: 500px) {
+    flex-direction: column-reverse;
+  }
+
   & h1 {
     max-width: 40rem;
+
+    @media (max-width: 500px) {
+      text-align: center;
+    }
   }
 
   & h1 div {
@@ -40,8 +48,13 @@
 
   & .buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 3rem;
+
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
+    }
 
     & .button {
       display: flex;
@@ -57,7 +70,7 @@
         background-color: var(--snitap-sun);
       }
 
-      &.play span{
+      &.play span {
         padding: 1.5rem;
         border-radius: 50%;
         background-color: white;
@@ -84,6 +97,10 @@
     width: 100%;
     max-width: 30.5rem;
     height: 30.5rem;
+
+    @media (max-width: 500px) {
+      height: 25rem;
+    }
 
     & .content {
       width: 100%;
@@ -127,8 +144,6 @@
       transform: translateX(400%);
       animation: slideIn 2.2s 800ms ease both;
     }
-
-
   }
 }
 
